@@ -8,8 +8,8 @@ RoboMaster 2026 工程机器人研发项目，包含机械臂与底盘固件、�
 
 | 部分 | 内容 | 主要工具 |
 | --- | --- | --- |
-| `Firmware/2026-engineer/Engineer_arm` | 机械臂控制固件 | STM32CubeMX、GNU Arm Embedded Toolchain、Make、OpenOCD/J-Link |
-| `Firmware/2026-engineer/Engineer_chassis` | 底盘控制固件 | STM32CubeMX、GNU Arm Embedded Toolchain、Make、OpenOCD/J-Link |
+| `Firmware/Engineer_arm` | 机械臂控制固件 | STM32CubeMX、GNU Arm Embedded Toolchain、Make、OpenOCD/J-Link |
+| `Firmware/Engineer_chassis` | 底盘控制固件 | STM32CubeMX、GNU Arm Embedded Toolchain、Make、OpenOCD/J-Link |
 | `Mechanical/CAD` | 整机、云台、底盘、车架和裁判系统的 SolidWorks 模型 | SolidWorks |
 | `Mechanical/Dxf` | 可交付加工的板件展开图 | 支持 DXF 的 CAD/CAM 软件 |
 | `Mechanical/BOM` | 电机等物料清单 | Excel 或兼容软件 |
@@ -60,14 +60,14 @@ VS Code 的本机工具链路径保存在各工程的 `.vscode/settings.json`，
 机械臂：
 
 ```bash
-cd Firmware/2026-engineer/Engineer_arm
+cd Firmware/Engineer_arm
 make -j
 ```
 
 底盘：
 
 ```bash
-cd Firmware/2026-engineer/Engineer_chassis
+cd Firmware/Engineer_chassis
 make -j
 ```
 
