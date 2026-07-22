@@ -1,0 +1,38 @@
+# Normalize text files across Windows and Unix development environments.
+* text=auto
+
+*.c         text eol=lf
+*.h         text eol=lf
+*.s         text eol=lf
+*.S         text eol=lf
+*.ld        text eol=lf
+Makefile    text eol=lf
+*.mk        text eol=lf
+*.ioc       text eol=lf
+*.cfg       text eol=lf
+*.jdebug    text eol=lf
+*.md        text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.json      text eol=lf
+*.txt       text eol=lf
+
+# CAD sources and other large binary assets belong in Git LFS.
+*.SLDPRT filter=lfs diff=lfs merge=lfs -text
+*.sldprt filter=lfs diff=lfs merge=lfs -text
+*.SLDASM filter=lfs diff=lfs merge=lfs -text
+*.sldasm filter=lfs diff=lfs merge=lfs -text
+*.SLDDRW filter=lfs diff=lfs merge=lfs -text
+*.slddrw filter=lfs diff=lfs merge=lfs -text
+*.STEP   filter=lfs diff=lfs merge=lfs -text
+*.step   filter=lfs diff=lfs merge=lfs -text
+*.STP    filter=lfs diff=lfs merge=lfs -text
+*.stp    filter=lfs diff=lfs merge=lfs -text
+*.DXF    filter=lfs diff=lfs merge=lfs -text
+*.dxf    filter=lfs diff=lfs merge=lfs -text
+*.zip    filter=lfs diff=lfs merge=lfs -text
+*.7z     filter=lfs diff=lfs merge=lfs -text
+*.pdf    filter=lfs diff=lfs merge=lfs -text
+*.xls    filter=lfs diff=lfs merge=lfs -text
+*.xlsx   filter=lfs diff=lfs merge=lfs -text
+*.a      filter=lfs diff=lfs merge=lfs -text

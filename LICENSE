@@ -1,0 +1,30 @@
+26-EngBot multi-license notice
+================================
+
+Copyright 2026 26-EngBot contributors.
+
+This repository contains material from multiple copyright holders and is
+not licensed as one indivisible work.
+
+1. Project-authored firmware contributions are made available under the
+   Apache License, Version 2.0 (SPDX-License-Identifier: Apache-2.0), only
+   to the extent described in Firmware/LICENSE. The full license text is
+   in LICENSES/Apache-2.0.txt.
+
+2. Project-authored mechanical design source is made available under the
+   CERN Open Hardware Licence Version 2 - Permissive
+   (SPDX-License-Identifier: CERN-OHL-P-2.0), only to the extent described
+   in Mechanical/LICENSE. The full license text is in
+   LICENSES/CERN-OHL-P-2.0.txt.
+
+3. Files and directories carrying their own copyright or license notices
+   remain governed by those notices. The project licenses do not override
+   or replace third-party terms.
+
+4. No project license is granted for material marked "all rights reserved",
+   for supplier/manufacturer models and documentation, or for material whose
+   contributors do not have authority to license. See NOTICE for known
+   third-party categories and locations.
+
+When redistributing this repository, preserve this file, the applicable full
+license texts, NOTICE, and all file-level or directory-level notices.

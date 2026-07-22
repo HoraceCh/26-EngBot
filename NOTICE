@@ -1,0 +1,26 @@
+26-EngBot
+Copyright 2026 26-EngBot contributors.
+
+This repository is a mixed-source engineering project. It includes project
+contributions and components from other copyright holders. Known categories
+include, without limitation:
+
+- Arm CMSIS and CMSIS-DSP material. Apache-2.0 notices are present in the
+  relevant source trees and bundled LICENSE.txt files.
+- STMicroelectronics STM32F4 HAL, CMSIS device support, generated code, and
+  STM32 USB Device Library. Applicable LICENSE.txt files and source headers
+  are retained in each firmware project. Some USB library code is governed by
+  ST SLA0044 and is restricted to use with ST-manufactured devices.
+- FreeRTOS source under its bundled MIT license.
+- SEGGER RTT source under the redistribution notice contained in each SEGGER
+  source file.
+- HNU YueLu EC and named individual authors' firmware modules. Files that say
+  "all rights reserved" are not relicensed by this project.
+- Motor, sensor, referee-system and communications protocol manuals, images,
+  and datasheets, which remain the property of their respective publishers.
+- Supplier, manufacturer and RoboMaster component CAD models included to make
+  assemblies usable. These models are not relicensed by the project unless a
+  file-specific notice explicitly says otherwise.
+
+All third-party copyright, trademark, attribution, and license notices must be
+preserved. Inclusion does not imply endorsement by any third party.

@@ -1,0 +1,26 @@
+Mechanical design licensing scope
+=================================
+
+SPDX-License-Identifier: CERN-OHL-P-2.0
+
+Copyright 2026 26-EngBot contributors.
+
+Original mechanical design source created for the 26-EngBot project is
+licensed under the CERN Open Hardware Licence Version 2 - Permissive. The full
+text is available at:
+
+    ../LICENSES/CERN-OHL-P-2.0.txt
+
+This grant applies only to CAD models, drawings, manufacturing exports, and
+BOM material for which the 26-EngBot contributors hold the necessary rights.
+
+It does not relicense downloaded or imported supplier/manufacturer models,
+RoboMaster referee-system models, component models, archived reference
+assemblies, logos, datasheets, or any other third-party material. Such files
+remain subject to their original terms. If ownership or provenance of a file
+cannot be established, no permission beyond applicable law should be inferred
+from its presence in this repository.
+
+When conveying a modified covered design, retain applicable notices and add a
+notice recording the date and a brief description of the modification, as
+required by CERN-OHL-P-2.0 section 3.3.

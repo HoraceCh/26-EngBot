@@ -1,0 +1,54 @@
+# Operating system and editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+
+# VS Code settings containing machine-specific toolchain paths
+**/.vscode/settings.json
+**/.vscode/*.code-workspace
+
+# STM32 / ARM build outputs
+**/build/
+**/Build/
+**/Debug/
+**/Release/
+**/Objects/
+**/Listings/
+*.o
+*.obj
+*.d
+*.dep
+*.elf
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.su
+*.cyclo
+*.gcda
+*.gcno
+*.log
+
+# IDE and debugger user state
+*.jdebug.user
+*.uvguix.*
+*.uvoptx
+*.eww
+*.ewt
+*.user
+
+# Generated backups and temporary files
+*.bak
+*.tmp
+*.autosave
+~$*
+
+# Local AI tooling state (keep .serena/project.yml and its .gitignore)
+.serena/cache/
+.serena/memories/
+.serena/project.local.yml

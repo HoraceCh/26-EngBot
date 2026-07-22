@@ -1,0 +1,29 @@
+Firmware licensing scope
+========================
+
+SPDX-License-Identifier: Apache-2.0
+
+Copyright 2026 26-EngBot contributors.
+
+Unless a file or component says otherwise, original firmware contributions
+created for the 26-EngBot project are licensed under the Apache License,
+Version 2.0. The full text is available at:
+
+    ../LICENSES/Apache-2.0.txt
+
+This grant applies only to contributions for which the named contributors
+hold the necessary rights. It does not relicense:
+
+- STM32CubeMX-generated or STMicroelectronics-provided code;
+- CMSIS and CMSIS-DSP components supplied by Arm or STMicroelectronics;
+- FreeRTOS, SEGGER RTT, or any other third-party middleware;
+- files carrying an existing copyright or license notice, including files
+  marked "HNU YueLu EC ... all rights reserved";
+- datasheets, protocol manuals, images, prebuilt libraries, or other vendor
+  documentation; or
+- material whose provenance or licensing authority has not been established.
+
+The main third-party locations include Drivers/, Middlewares/, and files with
+their own headers elsewhere in the firmware tree. Those components remain
+subject to their original notices and bundled license files. If a file-level
+notice conflicts with this directory notice, the file-level notice controls.
