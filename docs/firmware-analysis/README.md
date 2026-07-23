@@ -41,6 +41,7 @@
 | 安全与并发专项审查 | 已完成（静态） | 完成安全机制矩阵、实时性/共享数据审查和 14 项待确认信息；确认 5 个 P0 |
 | 代码质量与证据复核 | 已完成（静态） | 复核操作映射、模式、双板控制链、协议、31 个 PID、12 个任务和关键参数；问题总计 P0=5/P1=7/P2=11/P3=6 |
 | 许可证最终审计 | 已完成（含发布治理门禁） | 确认混合许可结构；已建立 15 类组件清单和只读发布检查；HNU ARR、无明确许可算法/驱动、ST USB SLA0044 仍是外部授权阻断 |
+| 统一未确认信息清单 | 已建立 | 汇总硬件/电气、操作、控制、构建和许可证 40 项待核验信息，并给出材料、方法、风险和负责人 |
 | 文档最终验收 | 有条件通过 | 可用于学习和维护；操作内容仍需硬件资料、P0 修复和实机安全验证 |
 
 ## 两个固件工程概览
@@ -81,7 +82,8 @@
 - **STM32/FreeRTOS 初学者：** 按 [13-beginner-learning-path.md](13-beginner-learning-path.md) → [01-repository-map.md](01-repository-map.md) → [03-startup-and-rtos.md](03-startup-and-rtos.md) → [09-hardware-drivers.md](09-hardware-drivers.md) 阅读。
 - **控制学习者：** 读 [02-system-architecture.md](02-system-architecture.md) → [05-arm-control.md](05-arm-control.md) / [06-chassis-control.md](06-chassis-control.md) → [08-control-algorithms.md](08-control-algorithms.md)。
 - **固件开发者/维护者：** 从 [14-code-quality-review.md](14-code-quality-review.md) 的 P0/P1 开始，再读协议、参数和故障排查。
-- **发布/合规负责人：** 读 [15-license-audit.md](15-license-audit.md) 和仓库根 `LICENSE`、`NOTICE`、`Firmware/LICENSE`。
+- **发布/合规负责人：** 先读 [15-license-audit.md](15-license-audit.md)，按 [17-materials-supplement-checklist.md](17-materials-supplement-checklist.md) 收集来源和版本资料，再按 [16-license-verification-checklist.md](16-license-verification-checklist.md) 完成许可结论与发布审批，并结合仓库根 `LICENSE`、`NOTICE`、`Firmware/LICENSE` 执行。
+- **项目负责人/验收负责人：** 使用 [18-unconfirmed-information-checklist.md](18-unconfirmed-information-checklist.md) 分派 40 项待确认工作并记录闭环证据。
 
 ## 完整文档目录与推荐顺序
 
@@ -100,7 +102,10 @@
 13. [13-beginner-learning-path.md](13-beginner-learning-path.md)：16 阶段学习路线和 8 条深入代码路径。
 14. [14-code-quality-review.md](14-code-quality-review.md)：29 项 P0–P3 问题、证据复核、重大修正和改进路线。
 15. [15-license-audit.md](15-license-audit.md)：第三方分类、许可边界、再分发风险和发布前清单。
-16. [glossary.md](glossary.md)：当前可由仓库确认的术语、代码名称和谨慎释义。
+16. [16-license-verification-checklist.md](16-license-verification-checklist.md)：许可证、权利人授权、条款结论、发布门禁和签署代办。
+17. [17-materials-supplement-checklist.md](17-materials-supplement-checklist.md)：来源文件、版本、hash、SBOM、CAD/PDF 和构建记录补充代办。
+18. [18-unconfirmed-information-checklist.md](18-unconfirmed-information-checklist.md)：全项目 40 项未确认信息、所需材料、核验方法、风险、负责人和关闭模板。
+19. [glossary.md](glossary.md)：当前可由仓库确认的术语、代码名称和谨慎释义。
 
 ## 当前已经确认的信息
 
@@ -121,6 +126,9 @@
 - `【已确认｜A级】` 软件 STOP 依赖 MCU 任务和通信，不等同于独立硬件急停；板间超时、Fault 和底盘预初始化路径均不能证明所有输出被覆盖。
 
 ## 当前未确认的信息
+
+完整清单、材料要求和关闭模板见
+[18-unconfirmed-information-checklist.md](18-unconfirmed-information-checklist.md)。当前最关键的未确认信息包括：
 
 - `【代码中未确认｜D级】` 两块控制板的具体硬件名称、PCB 版本、物理安装位置和接线对应关系。
 - `【代码中未确认｜D级】` 电机在真实机械结构中的正方向、关节编号与装配图之间的一一对应。

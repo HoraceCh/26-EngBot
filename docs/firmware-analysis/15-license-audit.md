@@ -103,6 +103,11 @@ python tools/check_license_policy.py --profile repository-public --enforce
 5. 单独审查 PDF、预编译库、CAD 和商标；不因“仓库已经公开”推定许可。
 6. 将 `python tools/check_license_policy.py --profile repository-public --enforce` 接入发布流水线；后续再加入 REUSE/ScanCode/FOSSology 类扫描并人工复核文件级例外。扫描工具不能替代授权证据。
 
+资料收集要求见
+[17-materials-supplement-checklist.md](17-materials-supplement-checklist.md)；
+许可证结论、发布门禁和签署步骤见
+[16-license-verification-checklist.md](16-license-verification-checklist.md)。
+
 ## 6. 审计结论
 
 仓库已有较谨慎的多许可证顶层结构，并已补充可机读组件清单和发布阻断检查；FreeRTOS、CMSIS、HAL、ST USB 和 SEGGER 等主要组件保留了可识别声明。【较可信｜B级】 但治理工具不能创造许可：活动控制代码中仍有 `all rights reserved` 与无明确来源/许可文件，现阶段不能把整个固件作为 Apache-2.0 作品重新发布，也不能确认所有源代码和固件二进制均可对外再分发。发布前必须解除检查器列出的阻断项，并完成逐文件 SBOM、权利链和厂商条款复核。
