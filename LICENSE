@@ -28,3 +28,9 @@ not licensed as one indivisible work.
 
 When redistributing this repository, preserve this file, the applicable full
 license texts, NOTICE, and all file-level or directory-level notices.
+
+The machine-readable component inventory is in THIRD_PARTY_COMPONENTS.json.
+It records known license evidence, conditions, and unresolved release
+blockers. Run tools/check_license_policy.py before preparing a release. A
+"blocked" result is not a license grant and must not be bypassed by deleting
+or replacing an existing copyright notice.

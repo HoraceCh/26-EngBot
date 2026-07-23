@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "inventory_kind": "component-level licensing inventory",
+  "inventory_date": "2026-07-23",
+  "baseline_commit": "d7aa4214765a36a291678e58afd736484ac28083",
+  "scope_note": "This is a release-governance inventory, not a legal opinion or a complete file-level SPDX SBOM. A component marked blocked must not be included in the named release profiles until the required action is completed and recorded.",
+  "required_files": [
+    "LICENSE",
+    "NOTICE",
+    "Firmware/LICENSE",
+    "Mechanical/LICENSE",
+    "LICENSES/Apache-2.0.txt",
+    "LICENSES/CERN-OHL-P-2.0.txt"
+  ],
+  "release_profiles": {
+    "repository-public": "Publication or redistribution of the complete repository.",
+    "firmware-source": "Publication or redistribution of either firmware source tree.",
+    "firmware-binary": "Distribution of linked firmware images such as ELF, HEX or BIN.",
+    "mechanical": "Publication or redistribution of mechanical CAD, DXF and BOM material."
+  },
+  "restricted_notice_scan": {
+    "roots": [
+      "Firmware/Engineer_arm/application",
+      "Firmware/Engineer_arm/modules",
+      "Firmware/Engineer_chassis/application",
+      "Firmware/Engineer_chassis/modules"
+    ],
+    "suffixes": [
+      ".c",
+      ".h",
+      ".s",
+      ".S"
+    ],
+    "needle": "all rights reserved",
+    "known_files": [
+      "Firmware/Engineer_arm/application/robot_def.h",
+      "Firmware/Engineer_arm/modules/algorithm/controller.c",
+      "Firmware/Engineer_arm/modules/can_comm/can_comm.h",
+      "Firmware/Engineer_arm/modules/motor/DJImotor/dji_motor.h",
+      "Firmware/Engineer_arm/modules/motor/motor_def.h",
+      "Firmware/Engineer_arm/modules/remote/remote_control.h",
+      "Firmware/Engineer_chassis/application/robot_def.h",
+      "Firmware/Engineer_chassis/modules/algorithm/controller.c",
+      "Firmware/Engineer_chassis/modules/can_comm/can_comm.h",
+      "Firmware/Engineer_chassis/modules/motor/DJImotor/dji_motor.h",
+      "Firmware/Engineer_chassis/modules/motor/motor_def.h",
+      "Firmware/Engineer_chassis/modules/remote/remote_control.h"
+    ]
+  },
+  "components": [
+    {
+      "id": "project-firmware-license-scope",
+      "name": "26-EngBot project-authored firmware contributions",
+      "paths": [
+        "Firmware/LICENSE"
+      ],
+      "copyright_holder": "26-EngBot contributors, only where they hold the necessary rights",
+      "license_expression": "Apache-2.0",
+      "evidence": [
+        "Firmware/LICENSE",
+        "LICENSES/Apache-2.0.txt"
+      ],
+      "status": "conditional",
+      "blocks": [],
+      "required_action": "Apply this grant only after file provenance confirms that the contributors had authority to license the file. File-level and third-party notices take precedence."
+    },
+    {
+      "id": "project-mechanical-license-scope",
+      "name": "26-EngBot project-authored mechanical design source",
+      "paths": [
+        "Mechanical/LICENSE"
+      ],
+      "copyright_holder": "26-EngBot contributors, only where they hold the necessary rights",
+      "license_expression": "CERN-OHL-P-2.0",
+      "evidence": [
+        "Mechanical/LICENSE",
+        "LICENSES/CERN-OHL-P-2.0.txt"
+      ],
+      "status": "conditional",
+      "blocks": [],
+      "required_action": "Separate project-authored source from supplier, manufacturer and RoboMaster models before redistribution."
+    },
+    {
+      "id": "arm-cmsis",
+      "name": "Arm CMSIS",
+      "paths": [
+        "Firmware/Engineer_*/Drivers/CMSIS/**"
+      ],
+      "copyright_holder": "Arm Limited and contributors identified in file headers",
+      "license_expression": "Apache-2.0",
+      "evidence": [
+        "Firmware/Engineer_arm/Drivers/CMSIS/LICENSE.txt",
+        "Firmware/Engineer_chassis/Drivers/CMSIS/LICENSE.txt"
+      ],
+      "status": "cleared",
+      "blocks": [],
+      "required_action": "Preserve the bundled license and all copyright notices."
+    },
+    {
+      "id": "st-stm32f4-hal",
+      "name": "STMicroelectronics STM32F4 HAL/LL",
+      "paths": [
+        "Firmware/Engineer_*/Drivers/STM32F4xx_HAL_Driver/**"
+      ],
+      "copyright_holder": "STMicroelectronics",
+      "license_expression": "BSD-3-Clause OR LicenseRef-ST-Package-License",
+      "evidence": [
+        "Firmware/Engineer_arm/Drivers/STM32F4xx_HAL_Driver/LICENSE.txt",
+        "Firmware/Engineer_chassis/Drivers/STM32F4xx_HAL_Driver/LICENSE.txt"
+      ],
+      "status": "conditional",
+      "blocks": [],
+      "required_action": "Preserve the bundled license and source headers; retain the original STM32Cube package version/provenance record when available."
+    },
+    {
+      "id": "st-cmsis-device",
+      "name": "STMicroelectronics CMSIS device support",
+      "paths": [
+        "Firmware/Engineer_*/Drivers/CMSIS/Device/ST/STM32F4xx/**"
+      ],
+      "copyright_holder": "STMicroelectronics",
+      "license_expression": "Apache-2.0 OR LicenseRef-ST-Package-License",
+      "evidence": [
+        "Firmware/Engineer_arm/Drivers/CMSIS/Device/ST/STM32F4xx/LICENSE.txt",
+        "Firmware/Engineer_chassis/Drivers/CMSIS/Device/ST/STM32F4xx/LICENSE.txt"
+      ],
+      "status": "conditional",
+      "blocks": [],
+      "required_action": "Preserve the bundled license and source headers; retain the original STM32Cube package version/provenance record when available."
+    },
+    {
+      "id": "freertos",
+      "name": "FreeRTOS kernel and CMSIS-RTOS adaptation",
+      "paths": [
+        "Firmware/Engineer_*/Middlewares/Third_Party/FreeRTOS/Source/**"
+      ],
+      "copyright_holder": "Amazon.com, Inc. or its affiliates and identified contributors",
+      "license_expression": "MIT",
+      "evidence": [
+        "Firmware/Engineer_arm/Middlewares/Third_Party/FreeRTOS/Source/LICENSE",
+        "Firmware/Engineer_chassis/Middlewares/Third_Party/FreeRTOS/Source/LICENSE"
+      ],
+      "status": "cleared",
+      "blocks": [],
+      "required_action": "Preserve the copyright and permission notice in source and substantial portions."
+    },
+    {
+      "id": "st-usb-device-library",
+      "name": "STM32 USB Device Library",
+      "paths": [
+        "Firmware/Engineer_*/Middlewares/ST/STM32_USB_Device_Library/**"
+      ],
+      "copyright_holder": "STMicroelectronics",
+      "license_expression": "LicenseRef-SLA0044",
+      "evidence": [
+        "Firmware/Engineer_arm/Middlewares/ST/STM32_USB_Device_Library/LICENSE.txt",
+        "Firmware/Engineer_chassis/Middlewares/ST/STM32_USB_Device_Library/LICENSE.txt"
+      ],
+      "status": "blocked",
+      "blocks": [
+        "repository-public",
+        "firmware-source",
+        "firmware-binary"
+      ],
+      "required_action": "Record a release-specific compliance decision for SLA0044 clauses 4 and 5, confirm use only with ST-manufactured devices, and preserve the complete SLA0044 notice. Do not describe this component as Apache/MIT/BSD software."
+    },
+    {
+      "id": "segger-rtt",
+      "name": "SEGGER Real Time Transfer",
+      "paths": [
+        "Firmware/Engineer_*/Middlewares/Third_Party/SEGGER/**"
+      ],
+      "copyright_holder": "SEGGER Microcontroller GmbH",
+      "license_expression": "LicenseRef-SEGGER-RTT-File-Notice",
+      "evidence": [
+        "Firmware/Engineer_arm/Middlewares/Third_Party/SEGGER/RTT/SEGGER_RTT.c",
+        "Firmware/Engineer_chassis/Middlewares/Third_Party/SEGGER/RTT/SEGGER_RTT.c"
+      ],
+      "status": "conditional",
+      "blocks": [],
+      "required_action": "Preserve every SEGGER source-file copyright, redistribution condition and disclaimer; do not replace them with the project license header."
+    },
+    {
+      "id": "hnu-yuelu-arr-firmware",
+      "name": "HNU YueLu EC all-rights-reserved firmware",
+      "paths": [
+        "Firmware/Engineer_arm/application/robot_def.h",
+        "Firmware/Engineer_arm/modules/algorithm/controller.c",
+        "Firmware/Engineer_arm/modules/can_comm/can_comm.h",
+        "Firmware/Engineer_arm/modules/motor/DJImotor/dji_motor.h",
+        "Firmware/Engineer_arm/modules/motor/motor_def.h",
+        "Firmware/Engineer_arm/modules/remote/remote_control.h",
+        "Firmware/Engineer_chassis/application/robot_def.h",
+        "Firmware/Engineer_chassis/modules/algorithm/controller.c",
+        "Firmware/Engineer_chassis/modules/can_comm/can_comm.h",
+        "Firmware/Engineer_chassis/modules/motor/DJImotor/dji_motor.h",
+        "Firmware/Engineer_chassis/modules/motor/motor_def.h",
+        "Firmware/Engineer_chassis/modules/remote/remote_control.h"
+      ],
+      "copyright_holder": "HNU YueLu EC and named authors",
+      "license_expression": "NOASSERTION",
+      "evidence": [
+        "Firmware/Engineer_arm/application/robot_def.h",
+        "Firmware/Engineer_chassis/application/robot_def.h"
+      ],
+      "status": "blocked",
+      "blocks": [
+        "repository-public",
+        "firmware-source",
+        "firmware-binary"
+      ],
+      "required_action": "Obtain written authorization from the actual rights holder covering modification, source redistribution and binary distribution, or replace the code with a clean, clearly licensed implementation. Never remove or overwrite the existing notice as a substitute for permission."
+    },
+    {
+      "id": "wang-hongxi-algorithms",
+      "name": "Wang Hongxi named algorithms and INS support",
+      "paths": [
+        "Firmware/Engineer_*/modules/algorithm/QuaternionEKF.*",
+        "Firmware/Engineer_*/modules/algorithm/kalman_filter.*",
+        "Firmware/Engineer_*/modules/algorithm/user_lib.*",
+        "Firmware/Engineer_*/modules/imu/ins_task.*"
+      ],
+      "copyright_holder": "Wang Hongxi and named modifiers",
+      "license_expression": "NOASSERTION",
+      "evidence": [
+        "Firmware/Engineer_arm/modules/algorithm/QuaternionEKF.c",
+        "Firmware/Engineer_arm/modules/algorithm/kalman_filter.c",
+        "Firmware/Engineer_chassis/modules/algorithm/QuaternionEKF.c",
+        "Firmware/Engineer_chassis/modules/algorithm/kalman_filter.c"
+      ],
+      "status": "blocked",
+      "blocks": [
+        "repository-public",
+        "firmware-source",
+        "firmware-binary"
+      ],
+      "required_action": "Record the original project, version, source URL and license, plus the local modification history; obtain authorization or replace the implementation if no redistributable license can be proved."
+    },
+    {
+      "id": "dji-derived-modules",
+      "name": "DJI-attributed remote-control and OLED font material",
+      "paths": [
+        "Firmware/Engineer_*/modules/remote/remote_control.h",
+        "Firmware/Engineer_*/modules/oled/oledfont.h"
+      ],
+      "copyright_holder": "DJI and named modifiers",
+      "license_expression": "NOASSERTION",
+      "evidence": [
+        "Firmware/Engineer_arm/modules/remote/remote_control.h",
+        "Firmware/Engineer_arm/modules/oled/oledfont.h",
+        "Firmware/Engineer_chassis/modules/remote/remote_control.h",
+        "Firmware/Engineer_chassis/modules/oled/oledfont.h"
+      ],
+      "status": "blocked",
+      "blocks": [
+        "repository-public",
+        "firmware-source",
+        "firmware-binary"
+      ],
+      "required_action": "Locate the authoritative DJI distribution terms and version. Obtain redistribution permission or replace/remove the material from the release package."
+    },
+    {
+      "id": "device-driver-provenance",
+      "name": "Motor, encoder and BMI088 device drivers with incomplete provenance",
+      "paths": [
+        "Firmware/Engineer_*/modules/motor/DMmotor/**",
+        "Firmware/Engineer_*/modules/motor/HTmotor/**",
+        "Firmware/Engineer_*/modules/motor/LKmotor/**",
+        "Firmware/Engineer_*/modules/motor/RSmotor/**",
+        "Firmware/Engineer_*/modules/motor/YSmotor/**",
+        "Firmware/Engineer_*/modules/encoder/**",
+        "Firmware/Engineer_*/modules/BMI088/**"
+      ],
+      "copyright_holder": "NOASSERTION; mixed project, manufacturer or network provenance",
+      "license_expression": "NOASSERTION",
+      "evidence": [
+        "docs/firmware-analysis/15-license-audit.md"
+      ],
+      "status": "blocked",
+      "blocks": [
+        "repository-public",
+        "firmware-source",
+        "firmware-binary"
+      ],
+      "required_action": "Create a file-level provenance record with upstream URL/package, version, copyright holder, license and local changes. Obtain permission or replace every file that remains unlicensed."
+    },
+    {
+      "id": "precompiled-cmsis-dsp",
+      "name": "Precompiled CMSIS-DSP libraries",
+      "paths": [
+        "Firmware/Engineer_*/Middlewares/ST/ARM/DSP/Lib/*.a"
+      ],
+      "copyright_holder": "Arm Limited and/or STMicroelectronics",
+      "license_expression": "NOASSERTION",
+      "evidence": [
+        "Firmware/Engineer_arm/Drivers/CMSIS/LICENSE.txt",
+        "Firmware/Engineer_chassis/Drivers/CMSIS/LICENSE.txt"
+      ],
+      "status": "blocked",
+      "blocks": [
+        "repository-public",
+        "firmware-binary"
+      ],
+      "required_action": "Identify the exact upstream package and version and confirm that its binary redistribution terms cover these archives. Do not infer binary terms solely from adjacent source licenses."
+    },
+    {
+      "id": "vendor-manuals-and-datasheets",
+      "name": "Vendor manuals, protocols and datasheets",
+      "paths": [
+        "Firmware/Engineer_*/modules/**/*.pdf"
+      ],
+      "copyright_holder": "Respective manufacturers and publishers",
+      "license_expression": "NOASSERTION",
+      "evidence": [
+        "Firmware/Engineer_arm/modules/BMI088/bmi088-datasheet.pdf",
+        "Firmware/Engineer_chassis/modules/BMI088/bmi088-datasheet.pdf"
+      ],
+      "status": "blocked",
+      "blocks": [
+        "repository-public"
+      ],
+      "required_action": "Record the authoritative download URL and redistribution terms for each document. Remove it from public release packages and link to the publisher when redistribution permission is absent."
+    },
+    {
+      "id": "mechanical-cad-provenance",
+      "name": "Mechanical CAD containing mixed original and supplier/manufacturer models",
+      "paths": [
+        "Mechanical/CAD/**"
+      ],
+      "copyright_holder": "Mixed 26-EngBot contributors, suppliers, manufacturers and RoboMaster",
+      "license_expression": "NOASSERTION",
+      "evidence": [
+        "Mechanical/LICENSE"
+      ],
+      "status": "blocked",
+      "blocks": [
+        "repository-public",
+        "mechanical"
+      ],
+      "required_action": "Classify CAD files at file level. Keep confirmed project-authored sources under CERN-OHL-P-2.0 and exclude or separately authorize supplier, manufacturer and RoboMaster models."
+    }
+  ]
+}

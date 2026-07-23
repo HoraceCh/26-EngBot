@@ -120,3 +120,12 @@ make download_jlink
 - STM32、CMSIS、FreeRTOS、SEGGER、HNU YueLu EC、厂商模型、数据手册和协议资料等第三方内容仍适用其各自声明，不由上述许可证重新授权。
 
 完整文本和许可边界见根目录 [`LICENSE`](LICENSE)、[`LICENSES/`](LICENSES) 与 [`NOTICE`](NOTICE)。如文件自身的版权或许可证声明与目录说明不同，以文件自身声明为准。
+
+逐组件许可状态、证据和发布阻断项记录在
+[`THIRD_PARTY_COMPONENTS.json`](THIRD_PARTY_COMPONENTS.json)。准备公开发布前运行：
+
+```bash
+python tools/check_license_policy.py --profile repository-public --enforce
+```
+
+退出码 `1` 表示仍有已登记的授权或条款阻断项，退出码 `2` 表示清单本身不完整或与仓库不一致。不得通过删除版权头、改写作者或擅自添加 SPDX 标识来绕过检查；应取得权利人书面授权、补齐厂商条款证据、使用许可明确的实现替换，或从发布包排除相关内容。

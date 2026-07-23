@@ -24,3 +24,21 @@ include, without limitation:
 
 All third-party copyright, trademark, attribution, and license notices must be
 preserved. Inclusion does not imply endorsement by any third party.
+
+Release governance
+------------------
+
+THIRD_PARTY_COMPONENTS.json is the repository's machine-readable,
+component-level licensing inventory. It distinguishes cleared, conditional,
+and blocked components and links each entry to in-tree evidence. The inventory
+does not replace file-level notices or the original license texts.
+
+Before publishing source, firmware binaries, or mechanical files, run:
+
+    python tools/check_license_policy.py --profile repository-public --enforce
+
+An unresolved blocker means the named release profile is not approved by the
+repository evidence. Obtain written authorization, document the applicable
+vendor terms, replace the component with a clearly licensed implementation, or
+exclude it from the release package. Do not remove an "all rights reserved"
+notice or add a project license header merely to make the check pass.
